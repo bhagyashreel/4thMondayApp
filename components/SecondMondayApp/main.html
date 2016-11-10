@@ -1,0 +1,8 @@
+<div class="box container">
+    <uib-tabset justified="true" class="product-tab-bar" active="active">
+        <uib-tab ng-repeat="step in steps" active="step.active" ui-sref="{{step.action}}" disable="step.disabled" class="{{step.class}}">
+            <uib-tab-heading style="font-weight: bold; font-size:23px;color: tomato ">{{step.name}}</uib-tab-heading>
+            <div ui-view></div>
+        </uib-tab>
+    </uib-tabset>
+</div>

@@ -1,0 +1,12 @@
+<br>
+<div class="row" style="text-align: center">
+    <p style="color: floralwhite;font-family: Arial; font-style: normal;font-size: 28px; "><br>
+        {{data.FirstName}} {{data.LastName}} ({{data.Contact }}) <br>is going to
+        {{data.Location.city}}<br>and will departure at {{data.DepartureDt | date:'fullDate' }} </p> <br>
+    <p ng-if="radioModel == 'Return'">and return on {{data.ReturnDt | date:'fullDate' }} </p>
+
+    <button class="btn btn-danger"
+            ng-click="send(data.Email,message1(data.FirstName,data.Location.city,data.DepartureDt))">
+        Send Mail.
+    </button>
+</div>

@@ -1,0 +1,59 @@
+<form name="user">
+    <div><br>
+        <div class="row ">
+            <div class="form-group col-xs-8 col-xs-offset-2">
+                <label style="font-size: large">Location:</label>
+                <ui-select ng-model="data.Location" theme="bootstrap" ng-disabled="disabled"
+                           validator="required">
+                    <ui-select-match placeholder="select a country..">
+                        {{$select.selected.city}}
+                    </ui-select-match>
+                    <ui-select-choices group-by="'country'" repeat="country in countries | filter: $select.search">
+                        <span ng-bind-html="country.city | highlight: $select.search"></span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <br>
+        <div class="row" >
+            <div class="form-group col-xs-8 col-xs-offset-2">
+                <label style="font-size: large">Date Depart</label><br>
+                <p class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}"
+                           ng-model="data.DepartureDt" placeholder="Select the Departure Date..."
+                           is-open="popup1.opened" datepicker-options="dateOptions" ng-required="true"
+                           close-text="Close" alt-input-formats="altInputFormats"/>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-default" ng-click="open1()">
+                        <i class="glyphicon glyphicon-calendar"></i></button>
+                </span>
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="form-group col-xs-8 col-xs-offset-2">
+                <label style="font-size: large">Date Return</label><br>
+                <p class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}"
+                           ng-model="data.ReturnDt" placeholder="Select the Return Date..."
+                           is-open="popup2.opened"
+                           datepicker-options="dateOptions" close-text="Close"/>
+          <span class="input-group-btn">
+            <button type="button" class="btn btn-default">
+                <i class="glyphicon glyphicon-calendar" ng-click="open2()"></i></button>
+          </span>
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="form-group row">
+            <div class="form-group col-xs-8 col-xs-offset-2" style="text-align: center">
+                <button type="submit" ng-click="next(2)" validation-submit="user"
+                        class="btn btn-danger ng-pristine ng-valid ng-not-empty active ng-touched">
+                    Next <span class="glyphicon glyphicon-circle-arrow-right"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,95 @@
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-image: url('/assets/travel.jpg');
+  background-size: 100% 100%;
+}
+
+.images-size {
+  overflow-x: hidden;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+header {
+  background-color: #000066;
+  height: 120px;
+}
+
+.home-page-header {
+  color: aliceblue;
+  top: 20%;
+}
+
+.box {
+  color: mediumturquoise;
+  opacity: 0.6;
+  border-radius: 20px;
+  padding: 50px 40px;
+  margin-top: 10%;
+}
+
+.h2 {
+  margin-bottom: 50px;
+}
+
+.full button span {
+  background-color: limegreen;
+  border-radius: 32px;
+  color: black;
+}
+
+.partially button span {
+  background-color: orange;
+  border-radius: 32px;
+  color: black;
+}
+
+.validation-valid {
+  visibility: hidden;
+}
+
+.validation-invalid {
+  font-size: large;
+  color: red;
+}
+
+.not-active {
+  pointer-events: none;
+}
+
+.pointer-active {
+  pointer-events: auto;
+}
+
+.ui-select-choices-group-label {
+  color: #6ee866;
+  font-size: 15px;
+}
+
+.first-page-labels {
+  font-size: 22px;
+}
